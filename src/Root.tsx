@@ -1,7 +1,10 @@
 import {
     DropdownList,
     DropdownListItem,
-    IconTachometer
+    IconTachometer,
+    IconCalendarAlt,
+    IconAddressBook,
+    IconBalanceScale,
 } from '@7shifts/sous-chef';
 import { LayoutFrame } from 'app-layout-frame';
 import type { NavBarItems } from 'app-layout-frame/dist/layout/types';
@@ -12,11 +15,32 @@ function Root() {
     const NAV_ITEMS: NavBarItems = [
         {
             label: 'Home',
-            isActive: true,
+            isActive: false,
             isShowing: true,
             url: '/home',
             icon: IconTachometer
-        }
+        },
+        {
+            label: 'Schedule',
+            isActive: false,
+            isShowing: true,
+            url: '/schedule',
+            icon: IconCalendarAlt
+        },
+        {
+            label: 'Employees',
+            isActive: false,
+            isShowing: true,
+            url: '/employees',
+            icon: IconAddressBook
+        },
+        {
+            label: 'Payroll',
+            isActive: false,
+            isShowing: true,
+            url: '/payroll',
+            icon: IconBalanceScale
+        },
     ];
 
     return (
