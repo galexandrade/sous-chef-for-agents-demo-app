@@ -4,11 +4,17 @@ import {
     ActionListItem,
     Avatar,
     Button,
+    Dropdown,
+    DropdownList,
+    DropdownListDivider,
+    DropdownListItem,
     IconBan,
+    IconChevronDown,
     IconComment,
-    IconEllipsisV,
+    IconWrench,
     IconMapMarker,
     IconPlus,
+    IconSearch,
     IconSitemap,
     IconUser,
     IconUsers,
@@ -72,11 +78,22 @@ const Employees = () => {
                 title="View Employees"
                 actions={
                     <Inline space={8} alignItems="center">
-                        <Button>
-                            <Inline space={4} alignItems="center">
-                                Bulk actions <IconEllipsisV />
-                            </Inline>
-                        </Button>
+                        <Dropdown
+                            trigger={
+                                <Button>
+                                    <Inline space={4} alignItems="center">
+                                        <IconWrench /> Bulk actions <IconChevronDown />
+                                    </Inline>
+                                </Button>
+                            }
+                        >
+                            <DropdownList>
+                                <DropdownListItem onClick={() => {}}>Send invite</DropdownListItem>
+                                <DropdownListItem onClick={() => {}}>Deactivate employees</DropdownListItem>
+                                <DropdownListDivider />
+                                <DropdownListItem onClick={() => {}}>Export to CSV</DropdownListItem>
+                            </DropdownList>
+                        </Dropdown>
                         <Button theme="primary">
                             <Inline space={4} alignItems="center">
                                 <IconPlus /> Add employee
@@ -107,7 +124,7 @@ const Employees = () => {
                         <TextField
                             name="search"
                             placeholder="Search for an employee"
-                            prefix={<IconUser />}
+                            prefix={<IconSearch />}
                         />
                         <Inline space={8} flexWrap="wrap">
                             <ToolbarSelect
