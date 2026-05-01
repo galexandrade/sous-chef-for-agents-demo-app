@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "figma-mcp": {
+      "type": "http",
+      "url": "https://mcp.figma.com/mcp"
+    },
+    "storybook-mcp": {
+      "type": "http",
+      "url": "https://6127dabcc6f886003a19811b-wefbsocpcq.chromatic.com/mcp"
+    }
+  }
+}
