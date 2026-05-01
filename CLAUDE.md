@@ -30,36 +30,22 @@ There are no tests in this project.
 
 Always use `@7shifts/sous-chef` components — no raw HTML elements or third-party UI libraries for anything the design system covers.
 
-**Before writing UI code, fetch the reference docs:**
+**Before writing UI code, fetch the reference docs to understando how to use the Sous Chef design system:**
 
-| Resource | URL |
-|---|---|
-| Index | https://7shifts.github.io/sous-chef/llms.txt |
-| Component reference | https://7shifts.github.io/sous-chef/llms-components.txt |
-| Token reference | https://7shifts.github.io/sous-chef/llms-tokens.txt |
+https://7shifts.github.io/sous-chef/llms.md
 
 **Import rules:**
+
 - Always import from `@7shifts/sous-chef` — never from sub-paths like `@7shifts/sous-chef/dist/...`
 - `verbatimModuleSyntax` is enabled: type-only imports must use `import type { Foo }` syntax
 - Never hardcode hex colors or px values — use design tokens:
-  - In TSX inline styles: `COLORS['token-name']` (import `COLORS` from `@7shifts/sous-chef`)
-  - In CSS/SCSS: `var(--color-token-name)`
-  - In SCSS spacing: `$space-Nx` on a 4px grid (`$space-1x` = 4px, `$space-2x` = 8px, …)
-
-**Known type constraints (non-obvious):**
-- `Space` type only accepts multiples of 4 up to 60: `0 | 4 | 8 | 12 | 16 | 20 | 24 | 28 | 32 | 36 | 40 | 44 | 48 | 52 | 56 | 60`
-- `DataTableColumn` requires a `name` field (not `key`); `label` is optional
-- `DataTableCell` requires a `columnIndex: number` prop
-- Form fields (`TextField`, `SelectField`, etc.) integrate with Formik — wrap in `<Form>` when building forms
 
 ## Figma-to-code workflow
 
-1. Fetch `llms.txt` for the component list
-2. Map each Figma element to a Sous Chef component using `llms-components.txt`
-3. Match Figma colors/spacing to tokens via `llms-tokens.txt`
+1. Fetch `llms.md` for the component list
+2. Map each Figma element to a Sous Chef component using `llms-components.md`
+3. Match Figma colors/spacing to tokens via `llms-tokens.md`
 4. Build layout with `Stack` (vertical), `Inline` (horizontal), `Card`, `Page`/`PageLayout` — avoid custom CSS where possible
-5. Look up exact prop names in `llms-components.txt` before writing JSX
-6. If no Sous Chef equivalent exists, say so and propose the closest composition rather than using a raw HTML element
 
 ## Code style
 
