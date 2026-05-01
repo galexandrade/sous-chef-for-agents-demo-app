@@ -6,7 +6,7 @@
     },
     "storybook-mcp": {
       "type": "http",
-      "url": "http://localhost:6006/mcp"
+      "url": "https://6127dabcc6f886003a19811b-wefbsocpcq.chromatic.com/mcp"
     }
   }
 }

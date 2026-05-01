@@ -41,6 +41,13 @@ function Root() {
             url: '/payroll',
             icon: IconBalanceScale
         },
+        {
+            label: 'Update Payment',
+            isActive: false,
+            isShowing: true,
+            url: '/update-payment',
+            icon: IconBalanceScale
+        },
     ];
 
     return (

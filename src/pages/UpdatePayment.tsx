@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import {
-    Avatar,
     Button,
     Card,
     CheckboxField,
     Chip,
-    IconCheck,
+    IconCheckCircle,
     IconGift,
     Inline,
     Page,
@@ -25,41 +24,34 @@ const UpdatePayment = () => {
     const [agreed, setAgreed] = useState(false);
 
     return (
-        <Page title="Update Payment">
-            <Stack space={40}>
-                <Stack space={12}>
-                    <Text as="h1">Update your subscription</Text>
-                    <Text as="h4">You're upgrading to the Premium plan</Text>
-                </Stack>
+        <Page title="Update your subscription" subtitle="You're upgrading to the Premium plan">
+            {/* 504px matches the Figma content column — no Sous Chef component exposes maxWidth */}
+            <div style={{ maxWidth: 504, margin: '0 auto' }}>
+            <Stack space={16}>
+                <Card>
+                    <Inline justifyContent="center">
+                        <Text as="caption">PLAN ESTIMATIONS DETAILS</Text>
+                    </Inline>
+                </Card>
 
-                <Stack space={16}>
-                    <Card>
-                        <Inline justifyContent="center">
-                            <Text as="caption" color="#767676">PLAN ESTIMATIONS DETAILS</Text>
+                <Card style={{ background: 'var(--semantic/surface/container-high, #f3f3f3)' }}>
+                    <Stack space={16}>
+                        <Inline justifyContent="space-between" alignItems="center">
+                            <Text as="h3">Included in Premium</Text>
+                            <Chip theme="upsell"><IconGift /> GREAT VALUE</Chip>
                         </Inline>
-                    </Card>
-
-                    <Card>
                         <Stack space={16}>
-                            <Inline justifyContent="space-between" alignItems="center">
-                                <Text as="h4" emphasis="bold">Included in Premium</Text>
-                                <Chip theme="upsell"><IconGift /> GREAT VALUE</Chip>
-                            </Inline>
-                            <Stack space={16}>
-                                {SELL_POINTS.map((point) => (
-                                    <Inline key={point} space={16} alignItems="center">
-                                        <Avatar size="small" color="#323232">
-                                            <IconCheck />
-                                        </Avatar>
-                                        <Text as="h5">{point}</Text>
-                                    </Inline>
-                                ))}
-                            </Stack>
+                            {SELL_POINTS.map((point) => (
+                                <Inline key={point} space={16} alignItems="center">
+                                    <IconCheckCircle variant="solid" />
+                                    <Text>{point}</Text>
+                                </Inline>
+                            ))}
                         </Stack>
-                    </Card>
-                </Stack>
+                    </Stack>
+                </Card>
 
-                <Stack space={8}>
+                <Stack space={4}>
                     <CheckboxField
                         name="agree"
                         checked={agreed}
@@ -72,11 +64,12 @@ const UpdatePayment = () => {
                     </Text>
                 </Stack>
 
-                <Inline justifyContent="end" space={12}>
+                <Inline justifyContent="end" alignItems="center" space={12}>
                     <Button>Back</Button>
                     <Button theme="primary">Confirm and pay</Button>
                 </Inline>
             </Stack>
+            </div>
         </Page>
     );
 };
