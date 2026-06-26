@@ -21,10 +21,10 @@ function Root() {
             icon: IconTachometer
         },
         {
-            label: 'Locations',
-            isActive: URL_PATH === '/locations',
+            label: 'Tasks',
+            isActive: URL_PATH === '/tasks',
             isShowing: true,
-            url: '/locations',
+            url: '/tasks',
             icon: IconSitemap
         }
     ];
