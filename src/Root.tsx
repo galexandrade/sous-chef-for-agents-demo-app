@@ -1,6 +1,7 @@
 import {
     DropdownList,
     DropdownListItem,
+    IconSitemap,
     IconTachometer
 } from '@7shifts/sous-chef';
 import { LayoutFrame } from 'app-layout-frame';
@@ -9,13 +10,22 @@ import logo from './assets/sous-chef-logo.png';
 import { Outlet } from 'react-router-dom';
 
 function Root() {
+    const URL_PATH = window.location.pathname;
+
     const NAV_ITEMS: NavBarItems = [
         {
             label: 'Home',
-            isActive: true,
+            isActive: URL_PATH === '/home',
             isShowing: true,
             url: '/home',
             icon: IconTachometer
+        },
+        {
+            label: 'Locations',
+            isActive: URL_PATH === '/locations',
+            isShowing: true,
+            url: '/locations',
+            icon: IconSitemap
         }
     ];
 
