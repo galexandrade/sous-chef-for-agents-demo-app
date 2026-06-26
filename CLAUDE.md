@@ -26,3 +26,8 @@ Our internal component library (`@7shifts/sous-chef`).
 - **Never use raw HTML heading elements** (`<h1>` through `<h6>`) — ESLint forbids them. Use `<Text as="h3">` etc. from sous-chef instead.
 - Prefer sous-chef layout components (`Stack`, `Inline`, `Card`, `Page`, etc.) and `<div>` over semantic HTML elements — the design system handles semantics
 - Check the 7shifts MCP Server (`sous-chef_get_composition_patterns_reference` tool) for guidelines on how to compose components together (forms, lists, and others).
+- **Never use** signs for buttons, like '+' or '-'. Instead use a Sous Chef Button with a Sous Chef icon
+
+## Validation
+
+Validate if the UI looks good by using the Chrome Devtools MCP server. The app should be running on http://localhost:5173/, if not then run `yarn start`.
