@@ -34,10 +34,10 @@
     react-toastify "^5.5.0"
     time-autocomplete "^2.0.0-dev"
 
-"@7shifts/sous-chef@^4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@7shifts/sous-chef/-/sous-chef-4.2.0.tgz#adcf93037505cc8355a7b3013d00311af1f47c8c"
-  integrity sha512-fS5s09MkUKmhQY+pp72VyYd9CfnwgkuxV9RiqfcmuMj26/DiBvCoH1jjT5ttyrD12GLyVvSmOO0sQm1bd/LF+g==
+"@7shifts/sous-chef@^4.7.1":
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/@7shifts/sous-chef/-/sous-chef-4.7.1.tgz#aff7f5c5c578c64b1e79ee9b8b556fd46b1a6d9c"
+  integrity sha512-NZ6cukHS9Hkjzt0JVzLQ6NIYWeYnJzuYJlfNkTRX8BasEFTM8MbE2uwt2K8NNEztZIM2xih4SAL3qmTJw1zDUg==
   dependencies:
     classnames "^2.3.2"
     date-fns "2.29.3"

@@ -23,7 +23,7 @@ function Root() {
         <LayoutFrame
             navItems={NAV_ITEMS}
             appLogo={<img src={logo} alt="App Logo" style={{ width: 30 }} />}
-            companyName="Sous Chef for Agents"
+            companyName="Tech Tank demo"
             actions={[]}
             accountMenuDropdown={
                 <DropdownList>
