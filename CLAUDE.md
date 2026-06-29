@@ -73,11 +73,33 @@ const EmployeesFilterBar = () => {
 
 It is highly recomended to use icons as preffix on all the filters (medium size).
 
-### Stats cards
+### Insights
 
-Stats cards should span the full width of the page. Each card should use the `Text` component with the prop `as="insight"` for the main information.
+Whenever you want to display stats Cards for a page (list page or dashbord), you can do so by using the following approach:
 
-The content of each card should be centered.
+```
+
+<Card>
+    <Inline flex={[1, 1, 1, 1]}>
+        <Stack space={8}>
+            <Text as="h4">Open</Text>
+            <Text as="insight">37</Text>
+        </Stack>
+        <Stack space={8}>
+            <Text as="h4">Overdue</Text>
+            <Text as="insight">6</Text>
+        </Stack>
+        <Stack space={8}>
+            <Text as="h4">Due today</Text>
+            <Text as="insight">1</Text>
+        </Stack>
+        <Stack space={8}>
+            <Text as="h4">Done</Text>
+            <Text as="insight">74</Text>
+        </Stack>
+    </Inline>
+</Card>
+```
 
 ### Inline and Stack
 
